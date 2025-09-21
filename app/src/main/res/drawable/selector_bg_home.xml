@@ -1,10 +1,8 @@
 <!-- 重要：调整状态顺序并添加激活状态 -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- 激活状态优先 -->
     <item
-        android:state_activated="true"
+        android:state_checked="true"
         android:drawable="@drawable/baseline_home_green_24" />
-
     <!-- 按压反馈 -->
     <item
         android:state_selected="true"

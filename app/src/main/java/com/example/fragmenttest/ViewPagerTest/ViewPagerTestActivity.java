@@ -35,4 +35,9 @@ public class ViewPagerTestActivity extends AppCompatActivity {
         Intent  intent = new Intent(this,FragmentVPActivity.class);
         startActivity(intent);
     }
+
+    public void ToNavBottom(View view) {
+        Intent  intent = new Intent(this, NavBottomVPActivity.class);
+        startActivity(intent);
+    }
 }

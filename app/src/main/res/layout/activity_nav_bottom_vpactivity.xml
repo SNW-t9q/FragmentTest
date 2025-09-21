@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewPagerTest.NavBottomVPActivity"
+    android:orientation="vertical">
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/FragmentVP"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconSize="38dp"
+        app:itemTextAppearanceActive="@style/MainItemTextSelectStyle"
+        app:itemPaddingBottom="0dp"
+        />
+
+</LinearLayout>

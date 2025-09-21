@@ -1,6 +1,7 @@
 package com.example.fragmenttest.ViewPagerTest;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,6 +36,22 @@ public class FragmentVPActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.FragmentVP);
         initData();
         viewPager.setAdapter(myFragmentVPAdapter);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                Toast.makeText(FragmentVPActivity.this, "这是第" + (position + 1) + "页", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     private void initData() {

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="MainItemTextSelectStyle" >
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="MainItemTextUnSelectStyle" >
+        <item name="android:textSize">15sp</item>
+    </style>
+ </resources>
