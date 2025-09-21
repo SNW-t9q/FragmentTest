@@ -1,1 +1,1 @@
-Simple Application of ViewPager
+ViewPager combine with Fragment
