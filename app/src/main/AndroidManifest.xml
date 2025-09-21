@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FragmentTest">
         <activity
+            android:name=".ViewPagerTest.FragmentVPActivity"
+            android:exported="false" />
+        <activity
             android:name=".ViewPagerTest.ViewPagerActivity"
             android:exported="false" />
         <activity

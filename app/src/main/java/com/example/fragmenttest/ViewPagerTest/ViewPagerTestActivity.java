@@ -30,4 +30,9 @@ public class ViewPagerTestActivity extends AppCompatActivity {
         Intent  intent = new Intent(this,ViewPagerActivity.class);
         startActivity(intent);
     }
+
+    public void ToViewPagerFragment(View view) {
+        Intent  intent = new Intent(this,FragmentVPActivity.class);
+        startActivity(intent);
+    }
 }
