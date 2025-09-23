@@ -11,6 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.fragmenttest.DrawerLayout.DrawerLayoutActivity;
 import com.example.fragmenttest.ViewPagerTest.ViewPagerTestActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -57,5 +58,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void ToDrawerLayout(View view) {
+        Intent intent = new Intent(MainActivity.this, DrawerLayoutActivity.class);
+        startActivity(intent);
     }
 }
