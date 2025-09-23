@@ -1,1 +1,1 @@
-ViewPager combine with Fragment
+DrawerLayout
