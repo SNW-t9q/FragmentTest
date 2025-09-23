@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.FragmentTest" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorControlActivated">@color/purple_200</item>
+        <item name="android:navigationBarColor">#00000000</item>
+        <item name="android:navigationBarDividerColor">#00000000</item>
+    </style>
+</resources>

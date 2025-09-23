@@ -3,7 +3,6 @@ package com.example.fragmenttest.ViewPagerTest;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -16,9 +15,9 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.fragmenttest.Adapater.MyFragmentVPAdapter;
 import com.example.fragmenttest.Adapater.MyStaticFragmentAdapter;
 import com.example.fragmenttest.Fragment.MyFragmentVP;
+import com.example.fragmenttest.Fragment.NavBottomTabFragment;
 import com.example.fragmenttest.R;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -27,7 +26,7 @@ import com.google.android.material.navigation.NavigationBarView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NavBottomVPActivity extends AppCompatActivity {
+public class NavBottomTabActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private BottomNavigationView bottomNavigationView;
@@ -37,7 +36,7 @@ public class NavBottomVPActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_nav_bottom_vpactivity);
+        setContentView(R.layout.activity_nav_bottom_tab);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -49,7 +48,6 @@ public class NavBottomVPActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0); // 👈 底部 padding 设为 0
             return insets;
         });
-
         View rootView = findViewById(R.id.main);
         rootView.requestLayout();
         viewPager = findViewById(R.id.FragmentVP);
@@ -64,7 +62,7 @@ public class NavBottomVPActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                Toast.makeText(NavBottomVPActivity.this, "这是第" + (position + 1) + "页", Toast.LENGTH_SHORT).show();
+                Toast.makeText(NavBottomTabActivity.this, "这是第" + (position + 1) + "页", Toast.LENGTH_SHORT).show();
                 setSelectedItem(position);
             }
 
@@ -107,7 +105,7 @@ public class NavBottomVPActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        MyFragmentVP myFragmentVP1 = MyFragmentVP.newInstance("这是Fragment1","");
+        NavBottomTabFragment myFragmentVP1 = NavBottomTabFragment.newInstance("这是Fragment1","");
         MyFragmentVP myFragmentVP2 = MyFragmentVP.newInstance("这是Fragment2","");
         MyFragmentVP myFragmentVP3 = MyFragmentVP.newInstance("这是Fragment3","");
         list = new ArrayList<>();
@@ -116,6 +114,5 @@ public class NavBottomVPActivity extends AppCompatActivity {
         list.add(myFragmentVP3);
         myStaticFragmentAdapter = new MyStaticFragmentAdapter(getSupportFragmentManager(),list);
     }
-
 
 }
